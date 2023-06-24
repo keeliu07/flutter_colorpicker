@@ -13,14 +13,14 @@ class HsvColorPicker extends StatefulWidget {
   const HsvColorPicker({
     required this.pickerColor,
     required this.onColorChanged,
-    this.paletteType: PaletteType.hsv,
-    this.enableAlpha: true,
-    this.showLabel: true,
+    this.paletteType = PaletteType.hsv,
+    this.enableAlpha = true,
+    this.showLabel = true,
     this.labelTextStyle,
-    this.displayThumbColor: false,
-    this.colorPickerWidth: 300.0,
-    this.pickerAreaHeightPercent: 1.0,
-    this.pickerAreaBorderRadius: const BorderRadius.all(Radius.zero),
+    this.displayThumbColor = false,
+    this.colorPickerWidth = 300.0,
+    this.pickerAreaHeightPercent = 1.0,
+    this.pickerAreaBorderRadius = const BorderRadius.all(Radius.zero),
   });
 
   final HSVColor pickerColor;

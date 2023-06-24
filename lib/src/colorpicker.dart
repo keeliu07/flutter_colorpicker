@@ -13,15 +13,15 @@ class ColorPicker extends StatefulWidget {
   const ColorPicker({
     required this.pickerColor,
     required this.onColorChanged,
-    this.paletteType: PaletteType.hsv,
-    this.enableAlpha: true,
-    this.showLabel: true,
+    this.paletteType = PaletteType.hsv,
+    this.enableAlpha = true,
+    this.showLabel = true,
     this.labelTextStyle,
-    this.displayThumbColor: false,
-    this.portraitOnly: false,
-    this.colorPickerWidth: 300.0,
-    this.pickerAreaHeightPercent: 1.0,
-    this.pickerAreaBorderRadius: const BorderRadius.all(Radius.zero),
+    this.displayThumbColor = false,
+    this.portraitOnly = false,
+    this.colorPickerWidth = 300.0,
+    this.pickerAreaHeightPercent = 1.0,
+    this.pickerAreaBorderRadius = const BorderRadius.all(Radius.zero),
   });
 
   final Color pickerColor;
@@ -181,19 +181,19 @@ class SlidePicker extends StatefulWidget {
   const SlidePicker({
     required this.pickerColor,
     required this.onColorChanged,
-    this.paletteType: PaletteType.hsv,
-    this.enableAlpha: true,
-    this.sliderSize: const Size(260, 40),
-    this.showSliderText: true,
+    this.paletteType = PaletteType.hsv,
+    this.enableAlpha = true,
+    this.sliderSize = const Size(260, 40),
+    this.showSliderText = true,
     this.sliderTextStyle,
-    this.showLabel: true,
+    this.showLabel = true,
     this.labelTextStyle,
-    this.showIndicator: true,
-    this.indicatorSize: const Size(280, 50),
-    this.indicatorAlignmentBegin: const Alignment(-1.0, -3.0),
-    this.indicatorAlignmentEnd: const Alignment(1.0, 3.0),
-    this.displayThumbColor: false,
-    this.indicatorBorderRadius: const BorderRadius.all(Radius.zero),
+    this.showIndicator = true,
+    this.indicatorSize = const Size(280, 50),
+    this.indicatorAlignmentBegin = const Alignment(-1.0, -3.0),
+    this.indicatorAlignmentEnd = const Alignment(1.0, 3.0),
+    this.displayThumbColor = false,
+    this.indicatorBorderRadius = const BorderRadius.all(Radius.zero),
   });
 
   final Color pickerColor;
@@ -301,7 +301,7 @@ class _SlidePickerState extends State<SlidePicker> {
                   child: Text(
                     palette.toString().split('.').last[0].toUpperCase(),
                     style: widget.sliderTextStyle ??
-                        Theme.of(context).textTheme.bodyText1?.copyWith(
+                        Theme.of(context).textTheme.bodyLarge?.copyWith(
                             fontWeight: FontWeight.bold, fontSize: 16.0),
                   ),
                 ),

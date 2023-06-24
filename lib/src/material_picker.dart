@@ -11,7 +11,7 @@ class MaterialPicker extends StatefulWidget {
   MaterialPicker({
     required this.pickerColor,
     required this.onColorChanged,
-    this.enableLabel: false,
+    this.enableLabel = false,
   });
 
   final Color pickerColor;

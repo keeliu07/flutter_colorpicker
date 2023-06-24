@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/painting.dart';
 
-bool useWhiteForeground(Color color, {double bias: 1.0}) {
+bool useWhiteForeground(Color color, {double bias = 1.0}) {
   // Old:
   // return 1.05 / (color.computeLuminance() + 0.05) > 4.5;
 

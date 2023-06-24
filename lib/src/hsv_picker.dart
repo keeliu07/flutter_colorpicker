@@ -255,7 +255,7 @@ class TrackPainter extends CustomPainter {
 }
 
 class ThumbPainter extends CustomPainter {
-  const ThumbPainter({this.thumbColor, this.fullThumbColor: false});
+  const ThumbPainter({this.thumbColor, this.fullThumbColor = false});
 
   final Color? thumbColor;
   final bool fullThumbColor;
@@ -347,9 +347,9 @@ class CheckerPainter extends CustomPainter {
 class ColorPickerLabel extends StatefulWidget {
   const ColorPickerLabel(
     this.hsvColor, {
-    this.enableAlpha: true,
+    this.enableAlpha = true,
     this.textStyle,
-    this.editable: false, // TODO: TBD
+    this.editable = false, // TODO: TBD
     this.onColorChanged, // TODO: TBD
   });
 
@@ -421,7 +421,7 @@ class _ColorPickerLabelState extends State<ColorPickerLabel> {
                   Text(
                     item,
                     style: widget.textStyle ??
-                        Theme.of(context).textTheme.bodyText2?.copyWith(
+                        Theme.of(context).textTheme.bodyMedium?.copyWith(
                             fontWeight: FontWeight.bold, fontSize: 16.0),
                   ),
                   SizedBox(height: 10.0),
@@ -622,8 +622,8 @@ class ColorPickerSlider extends StatelessWidget {
 class ColorIndicator extends StatelessWidget {
   const ColorIndicator(
     this.hsvColor, {
-    this.width: 50.0,
-    this.height: 50.0,
+    this.width = 50.0,
+    this.height = 50.0,
   });
 
   final HSVColor hsvColor;
@@ -727,7 +727,7 @@ class ColorPickerArea extends StatelessWidget {
 
 class AlwaysWinPanGestureRecognizer extends PanGestureRecognizer {
   @override
-  void addAllowedPointer(PointerEvent event) {
+  void addAllowedPointer(PointerDownEvent event) {
     super.addAllowedPointer(event);
     resolve(GestureDisposition.accepted);
   }
